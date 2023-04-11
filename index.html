@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <nav>
+        <div class="logo">
+           <a href="index.html">  <img src="images/logo.png">  </a>
+        </div>  
+        <div class="nav-links"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="phone.html">Phone</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </nav> 
+
+    <div class="information">
+
+    <div class="layer"></div>
+
+        <img src="images/mobile.png" class="mobile">
+
+        <div id="circle">
+            <div class="feature one">
+                <img src="images/camera.png">
+                <diV>
+                    <h1>Camera</h1>
+                    <p>12MP, Wide Angle Lens</p>
+                </diV>
+            </div>
+            <div class="feature two">
+                <img src="images/processor.png">
+                <diV>
+                    <h1>Processor</h1>
+                    <p>Snapdragon Octa-core 11nm</p>
+                </diV>
+            </div>
+            <div class="feature three">
+                <img src="images/display.png">
+                <diV>
+                    <h1>Display</h1>
+                    <p>6.5 Mini-Drop Fullscreen</p>
+                </diV>
+            </div>
+            <div class="feature four">
+                <img src="images/battery.png">
+                <diV>
+                    <h1>Battery Life</h1>
+                    <p>500mAh, 720Hrs Standby</p>
+                </diV>
+            </div>
+        </div>
+    </div>
+
+        <div class="control">
+            <img src="images/arrow.png" id="ButtonUp">
+            <h2>Features</h2>
+            <img src="images/arrow.png" id="ButtonDown">
+        </div>
+    
+    <script>
+
+        var circle = document.getElementById("circle");
+        var ButtonUp = document.getElementById("ButtonUp");
+        var ButtonDown = document.getElementById("ButtonDown");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+
+        ButtonUp.onclick = function() 
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        
+        ButtonDown.onclick = function() 
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</div>
+</body>
+</html>
